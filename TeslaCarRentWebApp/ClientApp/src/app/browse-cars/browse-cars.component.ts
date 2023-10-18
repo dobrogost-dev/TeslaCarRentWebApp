@@ -8,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class BrowseCarsComponent implements OnInit {
 
   constructor() { }
-
+  availableCars = [
+    "Tesla S",
+    "Tesla 3",
+    "Tesla X",
+    "Tesla Y"
+  ]
   ngOnInit(): void {
   }
 
