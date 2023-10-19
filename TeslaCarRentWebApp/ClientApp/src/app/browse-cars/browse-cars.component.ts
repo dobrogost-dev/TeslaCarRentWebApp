@@ -14,6 +14,14 @@ export class BrowseCarsComponent implements OnInit {
     "Tesla X",
     "Tesla Y"
   ]
+  availableLocations = [
+    "Palma Airport",
+    "Palma City Center,",
+    "Alcudia",
+    "Manacor"
+  ]
+  selectedModel: string = '';
+  selectedLocation: string = '';
   ngOnInit(): void {
   }
 

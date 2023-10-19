@@ -1,4 +1,46 @@
-<p>browse-cars works!</p>
-<div *ngFor ="let car of availableCars">
-  {{car}}
+<h4 class="text-mdx-center m-5"> Add a reservation </h4>
+
+<div class="m-5 d-grid gap-3">
+  <div class="row">
+
+    <div class="col">
+      <div class="form-floating">
+        <select class="form-control" [(ngModel)]="selectedModel">
+          <option value="model1">Tesla S</option>
+          <option value="model2">Tesla 3</option>
+          <option value="model3">Tesla X</option>
+          <option value="model4">Tesla Y</option>
+        </select>
+        <label class="text-primary form-label">Model</label>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-floating">
+        <select class="form-control" [(ngModel)]="selectedLocation">
+          <option value="location1">Palma Airport</option>
+          <option value="location2">Palma City Center</option>
+          <option value="location3">Alcudia</option>
+          <option value="location4">Manacor</option>
+        </select>
+        <label class="text-primary form-label">Location</label>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-floating">
+        <input type="date" placeholder="Pick-up date" class="form-control" />
+        <label class="text-primary form-label">Pick-up date</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-floating">
+        <input type="date" placeholder="Drop-off date" class="form-control" />
+        <label class="text-primary form-label">Drop-off date</label>
+      </div>
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-primary">Check</button>
+    </div>
+  </div>
 </div>
