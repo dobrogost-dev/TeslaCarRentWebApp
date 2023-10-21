@@ -1,5 +1,7 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-
+using TeslaCarRentWebApp.Models;
+using TeslaCarRentWebApp.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +14,9 @@ builder.Services.AddSwaggerGen(c =>
         Url = "https://localhost:7045"
     })
 ); ;
+
+builder.Services.AddDbContext<DatabaseContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+builder.Services.AddScoped<IDbService, DbService>();
 
 var app = builder.Build();
 
