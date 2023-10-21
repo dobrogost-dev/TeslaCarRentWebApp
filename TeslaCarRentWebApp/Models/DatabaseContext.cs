@@ -55,8 +55,6 @@ namespace TeslaCarRentWebApp.Models
                 }
 
             };
-            //modelBuilder.Entity<Car>().Property(p => p.Price).HasColumnType("decimal(18,2)");
-            //modelBuilder.Entity<Order>().Property(p => p.FinalPrice).HasColumnType("decimal(18,2)");
 
             modelBuilder.Entity<Car>().HasData(cars);
             modelBuilder.Entity<Order>().HasData(orders);
